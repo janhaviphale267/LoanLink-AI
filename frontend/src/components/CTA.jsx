@@ -4,7 +4,7 @@ export default function CTA() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 fade-in">
+    <section className="py-16 fade-in">
       <div
         className="
         relative max-w-6xl mx-auto text-center px-10 py-16 rounded-3xl
