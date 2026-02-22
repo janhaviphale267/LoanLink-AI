@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="pt-6 pb-10 text-center fade-in">
@@ -22,13 +24,23 @@ export default function Hero() {
 
       {/* BUTTONS */}
       <div className="flex justify-center gap-5">
-        <button className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:brightness-110 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]">
-          Apply for a Loan →
-        </button>
 
-        <button className="border border-white/20 px-8 py-3 rounded-lg transition-all duration-300 hover:bg-white hover:text-black">
+        {/* Apply for Loan */}
+        <Link
+          to="/register"
+          className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:brightness-110 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]"
+        >
+          Apply for a Loan →
+        </Link>
+
+        {/* Sign In */}
+        <Link
+          to="/signin"
+          className="border border-white/20 px-8 py-3 rounded-lg transition-all duration-300 hover:bg-white hover:text-black"
+        >
           Sign In
-        </button>
+        </Link>
+
       </div>
 
     </section>

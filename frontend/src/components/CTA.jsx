@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 export default function CTA() {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 fade-in">
-
       <div
         className="
         relative max-w-6xl mx-auto text-center px-10 py-16 rounded-3xl
@@ -12,12 +15,10 @@ export default function CTA() {
         hover:shadow-[0_0_80px_rgba(245,158,11,0.25)]
         "
       >
-
-        {/* Soft glow layer */}
+        {/* Soft glow */}
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-500/5 via-transparent to-yellow-500/5 blur-2xl opacity-70"></div>
 
         <div className="relative z-10">
-
           <h2 className="text-4xl md:text-5xl font-semibold mb-4">
             Ready to Get Started?
           </h2>
@@ -28,19 +29,13 @@ export default function CTA() {
           </p>
 
           <button
-            className="
-            bg-yellow-500 text-black px-10 py-3 rounded-lg font-semibold
-            transition-all duration-300
-            hover:brightness-110 hover:scale-[1.03]
-            hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]
-            "
+            onClick={() => navigate("/register")}
+            className="bg-yellow-500 text-black px-10 py-3 rounded-lg font-semibold transition-all duration-300 hover:brightness-110 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]"
           >
             Create Your Account →
           </button>
-
         </div>
       </div>
-
     </section>
   );
 }
